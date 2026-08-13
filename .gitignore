@@ -1,12 +1,9 @@
 node_modules
 .env.development
 .turbo
-.next/
-out/
-build
 tsconfig.json
 src
 tsup.config.ts
 env.d.*
 biome.json
-packages
+packages/*
