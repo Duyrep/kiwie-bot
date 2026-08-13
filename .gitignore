@@ -7,3 +7,4 @@ tsup.config.ts
 env.d.*
 biome.json
 packages/*
+.vscode
