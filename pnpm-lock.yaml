@@ -20,15 +20,6 @@ importers:
 
   apps/guard:
     dependencies:
-      '@rep/discord-commands':
-        specifier: workspace:*
-        version: link:../../packages/discord-commands
-      '@rep/discord-core':
-        specifier: workspace:*
-        version: link:../../packages/discord-core
-      '@rep/logger':
-        specifier: workspace:*
-        version: link:../../packages/logger
       '@seald-io/nedb':
         specifier: ^4.1.2
         version: 4.1.2
@@ -45,6 +36,15 @@ importers:
         specifier: ^4.4.3
         version: 4.4.3
     devDependencies:
+      '@rep/discord-commands':
+        specifier: workspace:*
+        version: link:../../packages/discord-commands
+      '@rep/discord-core':
+        specifier: workspace:*
+        version: link:../../packages/discord-core
+      '@rep/logger':
+        specifier: workspace:*
+        version: link:../../packages/logger
       '@rep/typescript-config':
         specifier: workspace:*
         version: link:../../packages/typescript-config
