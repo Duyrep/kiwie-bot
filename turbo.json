@@ -20,11 +20,11 @@
 			"cache": false,
 			"persistent": true
 		},
-		"deploy": {
+		"discord-deploy": {
 			"cache": false,
 			"persistent": true
 		},
-		"deploy:dev": {
+		"discord-deploy:dev": {
 			"cache": false,
 			"persistent": true
 		},

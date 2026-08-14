@@ -28,7 +28,7 @@ pnpm install
 
 
 ```bash
-pnpm deploy
+pnpm discord-deploy
 
 ```
 
