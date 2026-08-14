@@ -4,13 +4,21 @@
 			"description": "Kiểm tra độ trễ và thời gian phản hồi của bot",
 			"calculating": "⏳ Đang đo độ trễ mạng...",
 			"embed": {
-				"title": "🏓 Pong!",
+				"title": "Pong!",
 				"color": "#5865F2",
 				"fields": {
 					"apiLatency": "Độ trễ phản hồi (API)",
 					"wsLatency": "Độ trễ WebSocket (Gateway)"
 				},
 				"footer": "Yêu cầu bởi {user}"
+			}
+		},
+		"setChannel": {
+			"description": "Thiết lập kênh",
+			"success": "Đã thiết lập <#{channelId}> làm **kênh bẫy**",
+			"errors": {
+				"invalid": "Lệnh này chỉ có thể sử dụng trong máy chủ (Guild)!",
+				"notFound": "Không tìm thấy kênh"
 			}
 		}
 	}

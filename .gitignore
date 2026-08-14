@@ -5,6 +5,7 @@ tsconfig.json
 src
 tsup.config.ts
 env.d.*
+*.d.ts
 biome.json
 packages/*
 .vscode

@@ -5,7 +5,8 @@
 		"dev": "dotenv -e .env.development -- tsup --onSuccess \"cross-env NODE_ENV=development node dist/index.cjs | pino-pretty\"",
 		"build": "cross-env NODE_ENV=production tsup",
 		"start": "dotenv -e .env -- cross-env NODE_ENV=production node dist/index.cjs | pino-pretty",
-		"deploy": "dotenv -e .env -- tsup src/deploy.ts --onSuccess \"cross-env NODE_ENV=production node dist/deploy.cjs | pino-pretty\""
+		"deploy": "dotenv -e .env -- tsup src/deploy.ts --onSuccess \"cross-env NODE_ENV=production node dist/deploy.cjs | pino-pretty\"",
+		"deploy:dev": "dotenv -e .env.development -- tsup src/deploy-dev.ts --onSuccess \"cross-env NODE_ENV=development node dist/deploy-dev.cjs | pino-pretty\""
 	},
 	"type": "module",
 	"devDependencies": {
@@ -20,7 +21,10 @@
 		"@rep/discord-commands": "workspace:*",
 		"@rep/discord-core": "workspace:*",
 		"@rep/logger": "workspace:*",
+		"@seald-io/nedb": "^4.1.2",
 		"cross-env": "^10.1.0",
-		"discord.js": "^14.27.0"
+		"discord.js": "^14.27.0",
+		"env-paths": "^4.0.0",
+		"zod": "^4.4.3"
 	}
 }
