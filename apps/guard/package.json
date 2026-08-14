@@ -3,7 +3,7 @@
 	"version": "1.0.0",
 	"scripts": {
 		"dev": "dotenv -e .env.development -- tsup --onSuccess \"cross-env NODE_ENV=development node dist/index.cjs | pino-pretty\"",
-		"build": "cross-env NODE_ENV=production tsup & cp package.prod.json dist/package.json",
+		"build": "cross-env NODE_ENV=production tsup",
 		"start": "dotenv -e .env -- cross-env NODE_ENV=production node dist/index.cjs | pino-pretty",
 		"discord-deploy": "dotenv -e .env -- tsup src/deploy.ts --onSuccess \"cross-env NODE_ENV=production node dist/deploy.cjs | pino-pretty\"",
 		"discord-deploy:dev": "dotenv -e .env.development -- tsup src/deploy-dev.ts --onSuccess \"cross-env NODE_ENV=development node dist/deploy-dev.cjs | pino-pretty\""

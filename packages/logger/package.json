@@ -1,0 +1,20 @@
+{
+	"name": "@rep/logger",
+	"version": "1.0.0",
+	"exports": {
+		".": {
+			"types": "./src/index.ts",
+			"import": "./src/index.ts",
+			"require": "./src/index.ts"
+		}
+	},
+	"devDependencies": {
+		"@rep/typescript-config": "workspace:*",
+		"typescript": "^7.0.2"
+	},
+	"dependencies": {
+		"@types/node": "^26.2.0",
+		"pino": "^10.3.1",
+		"pino-pretty": "^13.1.3"
+	}
+}

@@ -1,0 +1,25 @@
+{
+	"name": "@rep/discord-core",
+	"version": "1.0.0",
+	"type": "module",
+	"devDependencies": {
+		"@rep/typescript-config": "workspace:*",
+		"typescript": "^7.0.2"
+	},
+	"dependencies": {
+		"@types/node": "^26.2.0",
+		"discord.js": "^14.27.0"
+	},
+	"exports": {
+		"./structures": {
+			"types": "./src/structures/index.ts",
+			"import": "./src/structures/index.ts",
+			"require": "./src/structures/index.ts"
+		},
+		"./types": {
+			"types": "./src/types/index.ts",
+			"import": "./src/types/index.ts",
+			"require": "./src/types/index.ts"
+		}
+	}
+}
