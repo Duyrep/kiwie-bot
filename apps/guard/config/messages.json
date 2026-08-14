@@ -1,0 +1,16 @@
+{
+  "commands": {
+    "ping": {
+      "calculating": "⏳ Đang đo độ trễ mạng...",
+      "embed": {
+        "title": "🏓 Pong!",
+        "color": "#5865F2",
+        "fields": {
+          "apiLatency": "Độ trễ phản hồi (API)",
+          "wsLatency": "Độ trễ WebSocket (Gateway)"
+        },
+        "footer": "Yêu cầu bởi {user}"
+      }
+    }
+  }
+}

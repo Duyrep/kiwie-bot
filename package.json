@@ -5,9 +5,12 @@
     "build": "turbo run build",
     "start": "turbo run start",
     "dev": "turbo run dev",
+    "memory-test": "pnpm start",
     "deploy": "turbo run deploy",
     "guard": "pnpm --filter=@rep/guard",
     "logger": "pnpm --filter=@rep/logger",
+    "discord-core": "pnpm --filter=@rep/discord-core",
+    "discord-commands": "pnpm --filter=@rep/discord-commands",
     "format": "pnpx @biomejs/biome format --write",
     "lint": "pnpx @biomejs/biome lint --write",
     "check": "pnpx @biomejs/biome check --write"

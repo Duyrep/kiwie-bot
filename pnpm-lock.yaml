@@ -20,6 +20,12 @@ importers:
 
   apps/guard:
     dependencies:
+      '@rep/discord-commands':
+        specifier: workspace:*
+        version: link:../../packages/discord-commands
+      '@rep/discord-core':
+        specifier: workspace:*
+        version: link:../../packages/discord-core
       '@rep/logger':
         specifier: workspace:*
         version: link:../../packages/logger
@@ -49,10 +55,46 @@ importers:
         specifier: ^7.0.2
         version: 7.0.2
 
-  packages/discord-core: {}
+  packages/discord-commands:
+    dependencies:
+      '@rep/discord-core':
+        specifier: workspace:*
+        version: link:../discord-core
+      '@types/node':
+        specifier: ^26.2.0
+        version: 26.2.0
+      discord.js:
+        specifier: ^14.27.0
+        version: 14.27.0
+    devDependencies:
+      '@rep/typescript-config':
+        specifier: workspace:*
+        version: link:../typescript-config
+      typescript:
+        specifier: ^7.0.2
+        version: 7.0.2
+
+  packages/discord-core:
+    dependencies:
+      '@types/node':
+        specifier: ^26.2.0
+        version: 26.2.0
+      discord.js:
+        specifier: ^14.27.0
+        version: 14.27.0
+    devDependencies:
+      '@rep/typescript-config':
+        specifier: workspace:*
+        version: link:../typescript-config
+      typescript:
+        specifier: ^7.0.2
+        version: 7.0.2
 
   packages/logger:
     dependencies:
+      '@types/node':
+        specifier: ^26.2.0
+        version: 26.2.0
       pino:
         specifier: ^10.3.1
         version: 10.3.1
