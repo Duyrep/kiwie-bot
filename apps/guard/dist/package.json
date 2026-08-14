@@ -1,0 +1,15 @@
+{
+	"name": "@rep/guard",
+	"scripts": {
+		"start": "dotenv -e .env -- cross-env NODE_ENV=production node index.cjs | pino-pretty"
+	},
+	"type": "module",
+	"dependencies": {
+		"dotenv-cli": "^11.0.0",
+		"@seald-io/nedb": "^4.1.2",
+		"cross-env": "^10.1.0",
+		"discord.js": "^14.27.0",
+		"env-paths": "^4.0.0",
+		"zod": "^4.4.3"
+	}
+}

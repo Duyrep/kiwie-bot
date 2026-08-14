@@ -3,7 +3,7 @@
 	"version": "1.0.0",
 	"scripts": {
 		"dev": "dotenv -e .env.development -- tsup --onSuccess \"cross-env NODE_ENV=development node dist/index.cjs | pino-pretty\"",
-		"build": "cross-env NODE_ENV=production tsup",
+		"build": "cross-env NODE_ENV=production tsup & cp package.prod.json dist/package.json",
 		"start": "dotenv -e .env -- cross-env NODE_ENV=production node dist/index.cjs | pino-pretty",
 		"deploy": "dotenv -e .env -- tsup src/deploy.ts --onSuccess \"cross-env NODE_ENV=production node dist/deploy.cjs | pino-pretty\"",
 		"deploy:dev": "dotenv -e .env.development -- tsup src/deploy-dev.ts --onSuccess \"cross-env NODE_ENV=development node dist/deploy-dev.cjs | pino-pretty\""
@@ -12,7 +12,6 @@
 	"devDependencies": {
 		"@rep/typescript-config": "workspace:*",
 		"@types/node": "^26.2.0",
-		"dotenv-cli": "^11.0.0",
 		"terser": "^5.50.0",
 		"tsup": "^8.5.1",
 		"typescript": "^7.0.2",
@@ -21,6 +20,7 @@
 		"@rep/logger": "workspace:*"
 	},
 	"dependencies": {
+		"dotenv-cli": "^11.0.0",
 		"@seald-io/nedb": "^4.1.2",
 		"cross-env": "^10.1.0",
 		"discord.js": "^14.27.0",
