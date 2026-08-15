@@ -1,8 +1,9 @@
 {
 	"commands": {
 		"ping": {
+			"name": "ping",
 			"description": "Kiểm tra độ trễ và thời gian phản hồi của bot",
-			"calculating": "⏳ Đang đo độ trễ mạng...",
+			"calculating": "Đang đo độ trễ mạng...",
 			"embed": {
 				"title": "Pong!",
 				"color": "#5865F2",
@@ -14,12 +15,50 @@
 			}
 		},
 		"setChannel": {
-			"description": "Thiết lập kênh",
-			"success": "Đã thiết lập <#{channelId}> làm **kênh bẫy**",
+			"name": "set_channel",
+			"description": "Cài đặt kênh cảnh báo/bẫy",
 			"errors": {
-				"invalid": "Lệnh này chỉ có thể sử dụng trong máy chủ (Guild)!",
-				"notFound": "Không tìm thấy kênh"
+				"invalid": "Lệnh này chỉ có thể sử dụng bên trong một server (guild).",
+				"channelNotFound": "Không tìm thấy thông tin kênh hiện tại.",
+				"executionFailed": "Đã xảy ra lỗi: {error}"
+			},
+			"success": "Đã cập nhật kênh <#{channelId}> thành công làm kênh Trap.",
+			"logs": {
+				"executing": "Thực thi lệnh bởi {userId}",
+				"noGuild": "Thao tác thất bại: interaction gọi ngoài guild bởi {userId}",
+				"channelNotFound": "Không tìm thấy channel tương ứng cho user {userId}",
+				"updating": "Đang cập nhật channel {channelId}",
+				"success": "Đã cập nhật thành công channel {channelId}",
+				"failed": "Lỗi khi cập nhật: {error}"
 			}
 		}
+	},
+	"events": {
+		"trapChannelListener": {
+			"logs": {
+				"detected": "Phát hiện tin nhắn vi phạm từ user \"{authorTag}\" ({authorId}) tại trap channel \"{channelName}\" ({channelId})",
+				"cleanupSuccess": "Đã xóa {totalDeleted} tin nhắn gần đây của user \"{authorTag}\" ({authorId})",
+				"incViolationFailed": "[Honeypot] Không thể tăng số lần vi phạm trong database cho user: \"{authorTag}\" ({authorId})",
+				"timeout": "Timeout user \"{authorTag}\" ({authorId}) trong {seconds}s (Vi phạm lần {count})",
+				"kick": "Đã KICK user \"{authorTag}\" ({authorId}) khỏi guild \"{guildName}\" do vi phạm {count} lần",
+				"summary": "Xử lý hoàn tất vi phạm: User: {userId} | Tổng vi phạm: {violations} | Tổng tin nhắn đã xóa: {totalDeleted}"
+			},
+			"reasons": {
+				"timeout": "Kích hoạt Trap Channel (Lần {count})",
+				"kick": "Kích hoạt Trap Channel (Vi phạm lần {count} - Kick)"
+			}
+		},
+		"ready": {
+			"loggedIn": "Đã đăng nhập với tư cách là {tag}!"
+		}
+	},
+	"system": {
+		"commandNotFound": "Không tìm thấy lệnh nào khớp với {commandName}.",
+		"commandExecutionError": "Lỗi khi thực thi lệnh: {commandName}\n{error}",
+		"commandLoaded": "Đã load command: {commandName}",
+		"eventLoaded": "Đã load event: {eventName}"
+	},
+	"database": {
+		"initPath": "Đường dẫn path: {path}"
 	}
 }

@@ -7,7 +7,7 @@ settings:
 importers:
 
   .:
-    devDependencies:
+    dependencies:
       '@biomejs/biome':
         specifier: 2.5.8
         version: 2.5.8
@@ -39,6 +39,9 @@ importers:
         specifier: ^4.4.3
         version: 4.4.3
     devDependencies:
+      '@rep/common':
+        specifier: workspace:*
+        version: link:../../packages/common
       '@rep/discord-commands':
         specifier: workspace:*
         version: link:../../packages/discord-commands
@@ -60,6 +63,19 @@ importers:
       tsup:
         specifier: ^8.5.1
         version: 8.5.1(typescript@7.0.2)
+      typescript:
+        specifier: ^7.0.2
+        version: 7.0.2
+
+  packages/common:
+    dependencies:
+      '@types/node':
+        specifier: ^26.2.0
+        version: 26.2.0
+    devDependencies:
+      '@rep/typescript-config':
+        specifier: workspace:*
+        version: link:../typescript-config
       typescript:
         specifier: ^7.0.2
         version: 7.0.2

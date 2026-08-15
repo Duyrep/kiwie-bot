@@ -1,0 +1,18 @@
+{
+	"name": "@rep/common",
+	"version": "1.0.0",
+	"exports": {
+		"./utils": {
+			"types": "./src/utils/index.ts",
+			"import": "./src/utils/index.ts",
+			"require": "./src/utils/index.ts"
+		}
+	},
+	"devDependencies": {
+		"@rep/typescript-config": "workspace:*",
+		"typescript": "^7.0.2"
+	},
+	"dependencies": {
+		"@types/node": "^26.2.0"
+	}
+}
