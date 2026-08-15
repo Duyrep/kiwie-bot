@@ -4,8 +4,8 @@
 	"scripts": {
 		"dev": "dotenv -e .env.development -- tsup --onSuccess \"cross-env NODE_ENV=development node dist/index.cjs | pino-pretty\"",
 		"build": "cross-env NODE_ENV=production tsup",
-		"start": "dotenv -e .env -- cross-env NODE_ENV=production node dist/index.cjs",
-		"discord-deploy": "dotenv -e .env -- cross-env NODE_ENV=production node dist/deploy.cjs",
+		"start": "dotenv -e .env -- cross-env NODE_ENV=production node dist/index.cjs | pino-pretty",
+		"discord-deploy": "dotenv -e .env -- cross-env NODE_ENV=production node dist/deploy.cjs | pino-pretty",
 		"discord-deploy:dev": "dotenv -e .env.development -- cross-env NODE_ENV=development tsx src/deploy.ts | pino-pretty"
 	},
 	"type": "module",
