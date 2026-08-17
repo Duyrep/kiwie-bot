@@ -4,6 +4,7 @@
 	"scripts": {
 		"build": "turbo run build",
 		"start": "turbo run start",
+		"start:env": "turbo run start:env",
 		"dev": "turbo run dev",
 		"memory-test": "pnpm start",
 		"discord-deploy": "turbo run discord-deploy",
